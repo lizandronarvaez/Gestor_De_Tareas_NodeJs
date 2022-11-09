@@ -1,0 +1,14 @@
+doctype html
+html(lang="es")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        style 
+            include ./reestablecer-password.css
+    body 
+        h2 Confirma tu cuenta, para completar el registro
+        p Hola vemos que te haz registrado en nuestra web.
+        p Pincha en este enlace para terminar el registro y validar tu cuenta.
+            a(href=`${confirmaCuenta}`) Confirmar cuenta
+        p Si no puedes ver el enlace, por favor pincha aqui #{confirmaCuenta}

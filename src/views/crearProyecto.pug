@@ -1,0 +1,13 @@
+extends layout 
+
+include mixins/nuevoProyecto 
+
+block contenido
+    .contenido-principal 
+        //- pre=vardump(infoProyecto)  
+        //- Si hay errores se ejecutara este condicional
+        if errores
+            each error in errores
+                .alerta.error= error.texto
+        +nuevoProyecto(infoProyecto)
+        

@@ -1,0 +1,37 @@
+extends layout 
+
+block contenido
+    .contenido-principal 
+        h1 #{infoPagina} - #{infoProyecto.nombre}
+        form.agregar-tarea(action=`/proyecto/${infoProyecto.url}` method="POST")
+            .campo 
+                input.nombre-tarea(type="text" name="gestiones" placeholder="Nombre Gestion")
+            .campo.enviar
+                input.boton.nueva-tarea(type="submit", value="Agregar Gestion")
+        
+            .listado-pendientes
+                ul 
+                    if buscarGestiones.length
+                        each gestion in buscarGestiones 
+                            li.tarea(data-gestion=gestion.id)
+                                p= gestion.gestiones
+                                .acciones 
+                                    if gestion.estado
+                                        i.far.fa-check-circle.completo
+                                    else 
+                                        i.far.fa-check-circle
+                                    i.fas.fa-trash
+                    else 
+                        p No hay tareas pedientes en este proyecto
+        //- Avance del proyecto
+        .avance 
+            h2 Progreso Proyecto 
+            #barra-avance.barra-avance
+                #porcentaje.porcentaje 
+        //- Acciones que se puede realizar en el proyecto
+        .contenedor-acciones 
+            a(href=`/proyecto/editar/${infoProyecto.id}` class="boton") Editar Proyecto
+            button#eliminar-proyecto(data-proyecto-url=infoProyecto.url type="button" class="boton eliminar") Eliminar Proyecto
+        
+        
+        

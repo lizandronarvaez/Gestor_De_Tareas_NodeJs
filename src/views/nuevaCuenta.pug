@@ -1,0 +1,32 @@
+doctype html
+html(lang="es")
+    head
+        include partials/head
+        title {titlePagina}
+    body.login  
+        .contenedor-formulario
+            form#formulario.caja.caja-login(action="/nueva-cuenta" method='POST' class='registro')
+                h2 Registro Nuevo Usuario
+                if locals.mensajes
+                    .alertas
+                        each mensaje in Object.keys(locals.mensajes)
+                            each error in mensajes[mensaje] 
+                                .alerta(class=`${mensaje}`)
+                                    p= error 
+                .campo 
+                    input(type="text" name='nombre' placeholder='Cual es tu nombre?' value= nombre)
+                .campo 
+                    input(type="email" name='email' placeholder='Introduce tu ema@il, por favor' value= email)
+                .campo 
+                    input(type="password" name='password' placeholder='Introduce una contraseña segura' value= password class='passwordInput')
+                    i(class='passwordShow').material-symbols-outlined Visibility
+                .campo 
+                    input(type="password" name='passwordConfirm' placeholder='Vuelve a introducir la contraseña' value= password class='passwordInput')
+                    i(class='passwordShow').material-symbols-outlined Visibility
+                .campo.enviar
+                    input.boton(type="submit", value="Registrarse")
+                .campo
+                    a(href="/") ¿Ya estas registrado? Logeate 
+        
+        script(src="../public/dist/bundle.js")
+        script(src="../public/js/funciones/passwordShow.js") 

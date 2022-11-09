@@ -1,0 +1,30 @@
+doctype html
+html(lang="es")
+    head
+        include partials/head
+    body.login
+        .contenedor-formulario
+            form#formulario.caja.caja-login(method='POST' action='/')
+                h1 Log In
+                if locals.mensajes
+                    .alertas
+                        each mensaje in Object.keys(locals.mensajes)
+                            if mensaje == 'correcto' 
+                                each correcto in mensajes[mensaje]
+                                    p.correcto= correcto
+                            else if mensaje == 'error'
+                                    p.error= error
+                .campo 
+                    input(type="email", name="email" placeholder='Introduce tu email') 
+                .campo 
+                    input(type="password", name="password" placeholder='Introduce tu contraseña' class ='passwordInput' autocomplete='on')
+                    i(class='passwordShow' id='passwordShow').material-symbols-outlined Visibility
+                .campo.enviar 
+                    input.boton(type="submit", value="Login") 
+                .campo.acciones
+                    p= "¿Usuario Nuevo?" 
+                        a(href="/nueva-cuenta") Registrate
+                    p= "Olvidaste tu contraseña?"
+                        a(href="/reestablecer-password" class="reestablecer") Pincha aqui
+            div(class='imagen')#formulario.caja.caja-login
+            script(src="../public/js/funciones/passwordShow.js") 

@@ -1,0 +1,606 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+* h1,h2,h3{
+    color: #F2F2F2;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap-reverse;
+}
+
+/** Login **/
+.login,
+.crear-cuenta {
+    /* background-color: #455A64; */
+}
+
+.nueva-password {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('https://www.cisco.com/c/en/us/solutions/enterprise-networks/what-is-network-programming/jcr:content/Grid/category_atl_1605/layout-category-atl/anchor_info_d47d.img.png/1647337863145.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.contenedor-formulario {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('https://www.cisco.com/c/en/us/solutions/enterprise-networks/what-is-network-programming/jcr:content/Grid/category_atl_1605/layout-category-atl/anchor_info_d47d.img.png/1647337863145.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.contenedor-formulario h1 {
+    text-align: center;
+    color: #000;
+    font-family: ;
+    animation: fadeIn;
+    animation-duration: 2.5s;
+    text-transform: capitalize;
+}
+
+.contenedor-formulario h2 {
+    color: #000;
+    text-align: center;
+}
+
+.contenedor-formulario h1 span {
+    font-weight: 400;
+    font-size: 1.2rem;
+}
+
+.contenedor-formulario p {
+    text-align: center;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.usuario-autenticado {
+    color: white !important;
+    font-size: 1.1rem;
+    transform: translateX(283px);
+}
+
+.usuario-autenticado i {
+    text-transform: capitalize;
+    font-size: 0.8em;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.caja-login {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: #F2F2F2;
+    border-radius: 16px 0 0 16px;
+    box-shadow: 15px -10px 80px 25px rgba(0, 0, 0, 0.5);
+    max-width: 650px;
+    width: 30%;
+    height: 80%;
+    min-height: 300px;
+    padding: 3rem;
+    animation: fadeIn;
+    animation-duration: 2.5s;
+}
+
+.caja-login.registro {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: #F2F2F2;
+    border-radius: 16px;
+    box-shadow: 15px -10px 15px 5px rgba(0, 0, 0, 0.5);
+    max-width: 650px;
+    width: 30%;
+    height: 80%;
+    /* margin: 0 auto; */
+    min-height: 300px;
+    padding: 3rem;
+    animation: fadeIn;
+    animation-duration: 2.5s;
+}
+
+.caja-login.reestablecer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: #F2F2F2;
+    border-radius: 16px;
+    box-shadow: 15px -10px 15px 5px rgba(0, 0, 0, 0.5);
+    max-width: 650px;
+    width: 30%;
+    height: 80%;
+    /* margin: 0 auto; */
+    min-height: 300px;
+    padding: 3rem;
+    animation: fadeIn;
+    animation-duration: 2.5s;
+}
+
+div .imagen {
+    border-radius: 0px 16px 16px 0px;
+    background-image: url('https://www.mooc.org/hubfs/applications-of-computer-programming.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.caja-login.nueva-contraseña {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: #F2F2F2;
+    border-radius: 16px;
+    box-shadow: 15px -10px 15px 5px rgba(0, 0, 0, 0.5);
+    max-width: 650px;
+    width: 30%;
+    height: 80%;
+    min-height: 300px;
+    padding: 3rem;
+    animation: fadeIn;
+    animation-duration: 2.5s;
+}
+
+.caja-login.nueva-contraseña h2,
+h3 {
+    text-align: center;
+}
+
+.campo {
+    /* display: flex; */
+    margin-bottom: 1rem;
+    /* align-items: center; */
+}
+.passwordShow{
+    transform: translate(325px,-35px);
+    cursor: pointer;
+}
+.campo label {
+    flex: 0 0 100px;
+    text-align: right;
+    padding-right: 1rem;
+    color: #F2F2F2;
+    font-weight: 300;
+    font-size: 1.2em;
+
+}
+
+.campo input[type="email"],
+.campo input[type="text"],
+.campo input[type="password"] {
+    height: 3rem;
+    width: 100%;
+    border: 0;
+    flex: 1;
+    border: 1px solid #455A64;
+    border-radius: 5rem;
+    padding-left: 2rem;
+    color: black;
+}
+
+.campo input[type="email"]:focus {
+    transform: scale(1.03);
+}
+
+.campo input[type='password']:focus {
+    transform: scale(1.03);
+}
+
+.campo.acciones {
+    /* justify-content: space-between; */
+}
+
+.enviar {
+    justify-content: flex-end;
+}
+
+.boton {
+    background-color: red;
+    text-align: center;
+    transition: background-color .5s ease-in-out;
+    padding: 2rem;
+    text-transform: uppercase;
+    border: none;
+    font-weight: 900;
+    width: 250px;
+    margin: 0 auto;
+    font-size: 0.9em;
+    display: flex;
+    align-items: center;
+    line-height: 0;
+    border-radius: 16px;
+}
+
+.boton span {
+    font-size: 2.2rem;
+    margin-left: 45px;
+}
+
+.boton:active {
+    cursor: pointer;
+    background-color: red !important;
+    transform: scale(0.9);
+}
+
+.boton.eliminar {
+    margin-top: 1rem;
+    float: right;
+    background-color: red !important;
+    color: white;
+}
+
+.campo a {
+    color: #ff0000;
+    text-decoration: none;
+    padding: .6em;
+    border-radius: 25px;
+    font-weight: 900;
+    font-size: 0.9em;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+.campo a:hover {
+    text-decoration: underline;
+}
+
+a.reestablecer {
+    color: #ff0000;
+    font-size: 0.9em;
+}
+
+/** Barra **/
+body.index {
+    height: 100vh;
+}
+
+.barra {
+    background-color: #333333;
+    padding: 1rem;
+    width: 82%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#homeProyecto {
+    font-size: 1.7em;
+    color: white !important;
+    transform: translateX(135px);
+}
+
+.barra h1 {
+    margin: 0;
+    font-size: 1.4rem;
+}
+
+.barra a {
+    color: #ff0000;
+    text-decoration: none;
+    padding-left: 3rem;
+    font-size: .9rem;
+}
+
+/*** sidebar**/
+.contenedor-proyectos {
+    max-width: 300px;
+    background-color: #333333;
+    height: 100vh;
+    align-self: flex-end;
+}
+
+.contenedor-proyectos h1 {
+    text-align: center;
+    color: #F2F2F2;
+}
+
+.panel {
+    padding: 1rem;
+    margin: 1rem;
+}
+
+.panel a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.panel h2 {
+    color: #FDD835;
+    font-weight: 900;
+    font-size: 2rem;
+    margin: 0;
+    text-align: center;
+}
+
+.crear-proyecto i {
+    margin-left: 1rem;
+}
+
+.crear-proyecto a {
+    color: #F2F2F2;
+    background-color: #00B762;
+}
+
+.crear-proyecto a:hover {
+    background-color: #00B762 !important;
+    transform: scale(.95);
+}
+
+.lista-proyectos ul {
+    list-style: none;
+    padding: 1.5rem 0 0 0;
+    margin: 0;
+    text-align: center;
+}
+
+.lista-proyectos ul li {
+    margin-bottom: 1rem;
+}
+
+.lista-proyectos ul li a:hover {
+    color: #FDD835;
+}
+
+/** Contenido Principal */
+.contenedor {
+    display: flex;
+    height: calc(100vh - 60px);
+}
+
+.contenido-principal {
+    flex: 1;
+    padding: 1rem;
+    overflow: scroll;
+    background-image: url('https://quantumeconomics.es/wp-content/uploads/2019/06/5-consejos-para-simplificar-tus-gestiones-empresariales-y-ser-ma%CC%81s-productivo.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.contenido-principal h1,
+.contenido-principal h2 {
+    text-align: center;
+}
+
+.contenido-principal h1 {
+    font-size: 1.8rem;
+}
+
+.contenido-principal h2 {
+    font-size: 1.4rem;
+    margin-top: 2rem;
+}
+
+.contenido-principal h1 span {
+    font-weight: 400;
+}
+
+.agregar-tarea {
+    max-width: 800px;
+    width: 90%;
+    background-color: #333333;
+    margin: 0 auto;
+    padding: 2rem;
+    color: white;
+    transition: background-color .5s ease-in-out;
+}
+
+/** Listado Pendientes **/
+.listado-pendientes {
+    background-color: #F2F2F2;
+    max-width: 800px;
+    width: 90%;
+    margin: 2rem auto 0 auto;
+    padding: .2em 2em;
+    border: 1px solid #999;
+}
+
+.listado-pendientes ul {
+    padding: 0;
+    list-style: none;
+}
+
+.listado-pendientes ul li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.4rem;
+    border-bottom: 1px solid #d1d1d1;
+}
+
+.listado-pendientes ul li:last-of-type {
+    border-bottom: none;
+}
+
+.listado-pendientes ul li i {
+    cursor: pointer;
+}
+
+.listado-pendientes ul li,
+p {
+    color: #000;
+}
+
+.acciones i:last-child {
+    margin-left: 3rem;
+}
+
+.completo {
+    color: #00B762;
+}
+
+.alerta {
+    /* padding: .5rem; */
+    text-align: center;
+    font-size: .7rem;
+    font-weight: 900;
+    max-width: 325px;
+    margin: 0 auto .7em auto;
+    text-transform: uppercase;
+    /* transform: translateY(45px); */
+    z-index: -1;
+}
+
+p.reestablecer-error {
+    background-color: #ff0000;
+    color: #F2F2F2;
+    width: 100%;
+    margin: 1em auto;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+p.reestablecer-correcto {
+    background-color: blue;
+}
+
+.error {
+    font-size: .75em;
+    background-color: red;
+    color: white;
+}
+
+.error p {
+    color: #F2F2F2 !important;
+    font-size: 0.9em;
+}
+
+.correcto {
+    color: green;
+    background-color: rgb(201, 245, 201);
+    border: 1px solid green;
+}
+
+.correcto p {
+    color: green;
+}
+
+/** Linea de Avance **/
+.barra-avance {
+    height: 30px;
+    border: 1px solid #999;
+    max-width: 800px;
+    width: 90%;
+    margin: 0 auto;
+    border-radius: 20px;
+    background-color: #F2F2F2;
+}
+
+.porcentaje {
+    width: 0%;
+    height: 100%;
+    background-color: #00B762;
+    background-image: linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+    background-size: 1rem 1rem;
+    transition: width .3s ease;
+    border-radius: 20px;
+}
+
+form.agregar-proyecto {
+    max-width: 800px;
+    width: 90%;
+    background-color: #333333;
+    margin: 0 auto;
+    padding: 2rem;
+    color: white;
+    transition: background-color .5s ease-in-out;
+}
+
+form.agregar-proyecto label,
+form.agregar-proyecto input {
+    display: block;
+}
+
+form.agregar-proyecto label {
+    /* flex: 0 0 150px; */
+    /* text-align: right; */
+    /* padding-right: 1rem; */
+    color: #F2F2F2;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 1rem;
+}
+
+form.agregar-proyecto input[type="text"] {
+    width: 100%;
+    height: 3rem;
+    padding-left: 1rem;
+    border: 1px solid #455A64;
+    border-radius: 5rem;
+    color: black;
+}
+
+form input[type="submit"] {
+    margin-top: 1rem;
+    text-align: center;
+    display: block;
+    padding: 1.2rem;
+    color: #F2F2F2;
+    width: 100%;
+    background-color: #00B762;
+}
+
+form input[type="submit"]:hover {
+    background-color: #00B762 !important;
+}
+
+.contenedor-acciones {
+    max-width: 800px;
+    margin: 2rem auto 0 auto;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.contenedor-acciones .boton:first-of-type {
+    color: #F2F2F2;
+    text-decoration: none;
+    background-color: #00B762;
+}
+
+.contenedor-acciones .boton:first-of-type:hover {
+    background-color: #00B762 !important;
+}
+
+.contenedor-acciones .boton.eliminar {
+    color: white;
+}
+
+.contenedor-acciones .boton {
+    margin: 0;
+    text-align: center;
+    display: block;
+}
+
+/* Zona reloj y fecha */
+.reloj{
+    display: flex;
+    position: fixed;
+    transform: translate(325px,-415px);
+    font-weight: 700;
+}
+.reloj p{
+    color: #F2F2F2;
+    font-size: 1.2rem;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    letter-spacing: .5rem;
+    line-height: .5rem;
+}
+.reloj .hora{
+    padding: 0 1rem;
+}

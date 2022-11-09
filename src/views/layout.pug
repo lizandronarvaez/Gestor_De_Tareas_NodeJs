@@ -1,0 +1,31 @@
+doctype html
+html(lang="es")
+    head
+        include partials/head
+    body 
+        header.barra 
+            a(href="/pagina-principal" id="homeProyecto") Sistema de Gestiones #{bootCamp}
+            p(class='usuario-autenticado')
+                | Bienvenido 
+                i #{usuarioAutenticado}
+                a(href="/cerrar-sesion") Cerrar Sesión
+            
+        main.contenedor
+            aside.contenedor-proyectos
+                h1 Administrador
+                .panel.crear-proyecto
+                    a(href="/nuevo-proyecto" class="boton") Nueva Gestion
+                        span + 
+                .panel.lista-proyectos
+                    h2 Gestiones Actuales 
+                    ul#proyectos.proyectos
+                        if(projectsCreates)
+                            each project in projectsCreates
+                                li 
+                                    a(href=`/proyecto/${project.url}`)= project.nombre
+                div(class='reloj')
+                    p(class='fecha')
+                    p(class='hora')
+            block contenido
+            //- pre= vardump(projectsCreates)
+        script(src="../public/dist/bundle.js")
