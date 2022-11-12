@@ -3,12 +3,16 @@ html(lang="es")
     head
         include partials/head
     body 
-        header.barra 
+        header.barra
+            div(class='reloj')
+                p(class='fecha')
+                p(class='hora')
             a(href="/pagina-principal" id="homeProyecto") Sistema de Gestiones #{bootCamp}
             p(class='usuario-autenticado')
                 | Bienvenido 
                 i #{usuarioAutenticado}
-                a(href="/cerrar-sesion") Cerrar Sesión
+                button(class='cerrar-sesion') 
+                    a(href="/cerrar-sesion" value='Cerrar Sesion').material-symbols-outlined Logout Cerrar Sesion
             
         main.contenedor
             aside.contenedor-proyectos
@@ -23,9 +27,6 @@ html(lang="es")
                             each project in projectsCreates
                                 li 
                                     a(href=`/proyecto/${project.url}`)= project.nombre
-                div(class='reloj')
-                    p(class='fecha')
-                    p(class='hora')
             block contenido
             //- pre= vardump(projectsCreates)
         script(src="../public/dist/bundle.js")

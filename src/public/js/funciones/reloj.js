@@ -13,8 +13,8 @@ function horaSistema() {
     if (minutos < 10) minutos = '0' + minutos
     if (segundos < 10) segundos = '0' + segundos
     // 
-    if (hora < 12) minutos = minutos + ' AM'
-    reloj.innerHTML = `${hora}:${minutos}`
+    if (hora < 12) segundos+=' AM'
+    reloj.innerHTML = `${hora}:${minutos}:${segundos}`
 }
 
 setInterval(horaSistema, 1000)

@@ -7,7 +7,10 @@ html {
 *:after {
     box-sizing: inherit;
 }
-* h1,h2,h3{
+
+* h1,
+h2,
+h3 {
     color: #F2F2F2;
 }
 
@@ -19,19 +22,13 @@ body {
     flex-wrap: wrap-reverse;
 }
 
-/** Login **/
-.login,
-.crear-cuenta {
-    /* background-color: #455A64; */
-}
-
 .nueva-password {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-image: url('https://www.cisco.com/c/en/us/solutions/enterprise-networks/what-is-network-programming/jcr:content/Grid/category_atl_1605/layout-category-atl/anchor_info_d47d.img.png/1647337863145.png');
-    background-repeat: no-repeat;
+    background-image: url('https://st4.depositphotos.com/1400069/21518/i/450/depositphotos_215184344-stock-photo-spring-background-with-bokeh-blurred.jpg');
+    /* background-repeat: no-repeat; */
     background-size: cover;
 }
 
@@ -40,8 +37,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-image: url('https://www.cisco.com/c/en/us/solutions/enterprise-networks/what-is-network-programming/jcr:content/Grid/category_atl_1605/layout-category-atl/anchor_info_d47d.img.png/1647337863145.png');
-    background-repeat: no-repeat;
+    background-image: url('https://st4.depositphotos.com/1400069/21518/i/450/depositphotos_215184344-stock-photo-spring-background-with-bokeh-blurred.jpg');
     background-size: cover;
 }
 
@@ -80,6 +76,7 @@ body {
     text-transform: capitalize;
     font-size: 0.8em;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-right: 2rem;
 }
 
 .caja-login {
@@ -134,9 +131,10 @@ body {
 
 div .imagen {
     border-radius: 0px 16px 16px 0px;
-    background-image: url('https://www.mooc.org/hubfs/applications-of-computer-programming.jpg');
+    background-image: url('https://uploadgerencie.com/imagenes/los-principios-basicos-de-administracion.png');
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: 45%;
 }
 
 .caja-login.nueva-contraseña {
@@ -161,14 +159,14 @@ h3 {
 }
 
 .campo {
-    /* display: flex; */
     margin-bottom: 1rem;
-    /* align-items: center; */
 }
-.passwordShow{
-    transform: translate(325px,-35px);
+
+.passwordShow {
+    transform: translate(325px, -35px);
     cursor: pointer;
 }
+
 .campo label {
     flex: 0 0 100px;
     text-align: right;
@@ -176,7 +174,6 @@ h3 {
     color: #F2F2F2;
     font-weight: 300;
     font-size: 1.2em;
-
 }
 
 .campo input[type="email"],
@@ -192,18 +189,15 @@ h3 {
     color: black;
 }
 
-.campo input[type="email"]:focus {
-    transform: scale(1.03);
+.campo input[type="email"]:focus,
+input[type='password']:focus {
+    transform: scale(1.07);
+    outline: none;
+    border:2px solid royalblue;
 }
-
-.campo input[type='password']:focus {
-    transform: scale(1.03);
-}
-
-.campo.acciones {
-    /* justify-content: space-between; */
-}
-
+/* .campo input:focus{
+    border-color: royalblue !important;
+} */
 .enviar {
     justify-content: flex-end;
 }
@@ -218,7 +212,7 @@ h3 {
     font-weight: 900;
     width: 250px;
     margin: 0 auto;
-    font-size: 0.9em;
+    font-size: .9rem;
     display: flex;
     align-items: center;
     line-height: 0;
@@ -232,7 +226,6 @@ h3 {
 
 .boton:active {
     cursor: pointer;
-    background-color: red !important;
     transform: scale(0.9);
 }
 
@@ -242,7 +235,6 @@ h3 {
     background-color: red !important;
     color: white;
 }
-
 .campo a {
     color: #ff0000;
     text-decoration: none;
@@ -276,6 +268,7 @@ body.index {
     display: flex;
     justify-content: center;
     align-items: center;
+    text-transform: capitalize;
 }
 
 #homeProyecto {
@@ -290,12 +283,15 @@ body.index {
 }
 
 .barra a {
-    color: #ff0000;
+    color: #F2F2F2;
     text-decoration: none;
-    padding-left: 3rem;
-    font-size: .9rem;
+    font-size: .7rem;
 }
-
+button.cerrar-sesion{
+    padding: 2px 5px;
+    background-color: #ff0000;
+    border-radius: 16px;
+}
 /*** sidebar**/
 .contenedor-proyectos {
     max-width: 300px;
@@ -384,6 +380,8 @@ body.index {
 .contenido-principal h2 {
     font-size: 1.4rem;
     margin-top: 2rem;
+    transform: translateY(45px);
+    color: #000;
 }
 
 .contenido-principal h1 span {
@@ -471,8 +469,7 @@ p.reestablecer-correcto {
 
 .error {
     font-size: .75em;
-    background-color: red;
-    color: white;
+    color: #ff0000;
 }
 
 .error p {
@@ -552,11 +549,8 @@ form input[type="submit"] {
     padding: 1.2rem;
     color: #F2F2F2;
     width: 100%;
-    background-color: #00B762;
-}
-
-form input[type="submit"]:hover {
-    background-color: #00B762 !important;
+    background-color: #4169e1;
+    text-transform: capitalize;
 }
 
 .contenedor-acciones {
@@ -588,19 +582,20 @@ form input[type="submit"]:hover {
 }
 
 /* Zona reloj y fecha */
-.reloj{
+.reloj {
     display: flex;
     position: fixed;
-    transform: translate(325px,-415px);
+    transform: translate(-400px, 0px);
     font-weight: 700;
 }
-.reloj p{
+
+.reloj p {
     color: #F2F2F2;
-    font-size: 1.2rem;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    letter-spacing: .5rem;
-    line-height: .5rem;
+    font-size: 1rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    letter-spacing: .3rem;
 }
-.reloj .hora{
+
+.reloj .hora {
     padding: 0 1rem;
 }

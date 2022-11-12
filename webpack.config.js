@@ -1,6 +1,6 @@
 import path from "path";
-import webpack from "webpack";
-
+const rulesForJavaScript = { test: /\.js$/, use: { loader: "babel-loader", options: { presets: ["@babel/preset-env"] } } }
+// 
 export default {
   entry: "./src/public/js/app.js",
   output: {
@@ -8,16 +8,6 @@ export default {
     path: path.resolve('./src/public/dist'),
   },
   module: {
-    rules: [
-      {
-        test: /\.m?js$/,
-        use: {
-          loader: "babel-loader",
-          options: {
-            presets: ["@babel/preset-env"],
-          },
-        },
-      },
-    ],
+    rules: [rulesForJavaScript],
   },
 };

@@ -8,8 +8,7 @@ import cookieParser from "cookie-parser";
 import { passport } from './src/config/passport.js'
 import { fileURLToPath } from 'url';
 import path, { dirname } from 'path';
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
+const __dirname = dirname(fileURLToPath(import.meta.url));
 // Conexion ala base de datos
 import { connectionDB } from "./src/config/connectionDB.js";
 connectionDB();
@@ -17,12 +16,12 @@ connectionDB();
 const app = express();
 const port = process.env.PORT || 3000;
 // Archivos estaticos donde se van a cargar
-app.use('/proyecto',express.static('src'));
+app.use('/proyecto', express.static('src'));
 app.use(express.static("src"));
 // Definiendo motor de plantilla
 app.set("view engine", "pug");
 // Definiendo la ruta de la carpeta de las vistas PUG
-app.set("views", path.join(__dirname,'./src/views'));
+app.set("views", path.join(__dirname, './src/views'));
 // Este middleware permite leer los datos de un formulario
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }));
