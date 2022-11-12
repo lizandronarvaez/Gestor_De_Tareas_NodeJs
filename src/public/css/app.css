@@ -291,6 +291,7 @@ button.cerrar-sesion{
     padding: 2px 5px;
     background-color: #ff0000;
     border-radius: 16px;
+    border: none;
 }
 /*** sidebar**/
 .contenedor-proyectos {
